@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<style>
+body,html{
+    margin:0 auto;
+  
+     background-color:grey;
+}
+.navbar{
+     /* height:50px;  */
+    /* background-color:blue; */
+    width:100%;
+    color: white;
+    margin:0 auto;
+    
+}
+.main{
+    height:500px;
+    background-color: grey; 
+    width:100%;
+}
+.about{
+    /* height:400px; */
+    background-color: lightblue;
+    padding-bottom:20px;
+}
+.sched-price{
+    height:400px;
+    background-color: lightgray;
+    display: inline-flex;
+}
+
+#carouselExampleControls{
+    width:100%;
+}
+#slide1{
+    background-image: url("IMG_3560_edited.jpg");
+     background-size: cover;
+       background-repeat: no-repeat;
+    height:600px;
+}
+#slide2{
+    background-image: url("icon-css.png");
+     background-size: cover;
+       background-repeat: no-repeat;
+    height:600px;
+}
+.card{
+    margin-top:30px;
+}
+.center{
+    text-align: center;
+}
+.jumbotron{
+    height:100%;
+}
+.rounded-circle{
+    float:left;
+    margin-right:10px;
+   
+}
+
+.bo{
+    margin-bottom:20px;
+}
+
+    </style>
+<body>
+   <div class="container-fluid">
+   <nav class="navbar fixed-top navbar-dark bg-dark">
+      <div class="col-lg-3">
+         company logo
+      </div>
+      <div class="col-lg-4 center">
+         the fitness center
+      </div>
+      <div class-"col-lg-4">
+         <button type="button" class="btn btn-outline-light btn-sm">Locations</button>
+         <button type="button" class="btn btn-outline-light btn-sm">Membership</button>
+         <button type="button" class="btn btn-outline-light btn-sm">Schedule</button>
+         <button type="button" class="btn btn-primary">Sign up</button>
+      </div>
+      <div class="col-lg-12 links">
+      </div>
+   </nav>
+   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+         <div class="carousel-item active" id="slide1">
+            <img class="d-block w-100" src="#" alt="first slide">
+         </div>
+         <div class="carousel-item" id="slide2">
+            <img class="d-block w-100" src="#" alt="Second slide">
+         </div>
+         <div class="carousel-item" id="slide2">
+            <img class="d-block w-100" src="#" alt="Third slide">
+         </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+   </div>
+   <div class="col-lg-12">
+   <div class="row about">
+      <div class="col-md-2">
+      </div>
+      <div class="col-lg-8">
+         <div class="jumbotron bo">
+            <h1>About Us</h1>
+            <p>
+               is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
+         </div>
+      </div>
+      <div class="col-md-2">
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-lg-12 sched-price">
+         <div class="col-lg-3">
+         </div>
+         <div class="col-lg-2">
+            <div class="card" >
+               <img class="card-img-top" src="..." alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Classes</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-2">
+            <div class="card" >
+               <img class="card-img-top" src="..." alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Pricing</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-2">
+            <div class="card" >
+               <img class="card-img-top" src="..." alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Specials</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row about">
+      <div class="col-md-6">
+         <div class="jumbotron ">
+            <div class="container">
+               <h1 class="display-4">Our Amenities</h1>
+               <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div class="jumbotron">
+            <div class="container">
+               <h1 class="display-4">Meet the Staff</h1>
+               <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+               <div class="card">
+                  <div class="card-header">
+                     Lead Trainer
+                  </div>
+                  <div class="card-body">
+                     <h5 class="card-title">Bob Fitness</h5>
+                     <img class="rounded-circle" src="./lead-trainer.jpg" style="width:5rem;" alt="Card image cap">
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header">
+                     Personal Trainer
+                  </div>
+                  <div class="card-body">
+                     <h5 class="card-title">Michelle Fitness</h5>
+                     <img class="rounded-circle" src="./personal-trainer2.jpg" style="width:5rem;" "height:15px;" alt="Card image cap">
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header">
+                     Personal Trainer
+                  </div>
+                  <div class="card-body">
+                     <h5 class="card-title">Jerry Fitness</h5>
+                     <img class="rounded-circle" src="./personal-trainer3.jpg" style="width:5rem;" alt="Card image cap">
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row about">
+   <div class="col-2-lg"></div>
+</body></html>

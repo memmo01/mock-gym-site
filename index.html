@@ -30,10 +30,10 @@ body,html{
     padding-bottom:20px;
 }
 .gym-options{
-    height:400px;
+    /* height:400px; */
     background-color: lightgray;
     display: inline-flex;
-    padding-top:60px;
+    padding:60px 0 40px 0;
    
 }
 .location{
@@ -43,19 +43,25 @@ body,html{
 
 }
 #slide1{
-    background-image: url("IMG_3560_edited.jpg");
+    background-image: url("workoutpic1.jpg");
      background-size: cover;
        background-repeat: no-repeat;
     height:600px;
 }
 #slide2{
-    background-image: url("icon-css.png");
+    background-image: url("gympic2.jpg");
+     background-size: cover;
+       background-repeat: no-repeat;
+    height:600px;
+}
+#slide3{
+    background-image: url("gympic3.jpg");
      background-size: cover;
        background-repeat: no-repeat;
     height:600px;
 }
 .card{
-    margin-top:30px;
+    /* margin-top:30px; */
 }
 .center{
     text-align: center;
@@ -80,6 +86,22 @@ body,html{
         height:400px;
         text-align: center;
     }
+    #calendar-pic{
+        margin-left:30%;
+        padding-top:20px;
+    }
+     #star-pic{
+        margin-left:25%;
+        padding-top:20px;
+    }
+    #member-pic{
+        margin-left:20%;
+        padding-top:20px;
+    }
+    #text{
+        padding-top:24px;
+    }
+  
   
 
     </style>
@@ -109,7 +131,7 @@ body,html{
          <div class="carousel-item" id="slide2">
             <img class="d-block w-100" src="#" alt="Second slide">
          </div>
-         <div class="carousel-item" id="slide2">
+         <div class="carousel-item" id="slide3">
             <img class="d-block w-100" src="#" alt="Third slide">
          </div>
       </div>
@@ -137,21 +159,27 @@ body,html{
       <div class="col-md-2">
       </div>
    </div>
-   <div class="row">
-      <div class="col-lg-12 gym-options">
-         <div class="col-lg-3">
+
+
+
+
+   <div class="row gym-options">
+       
+          <div class="col-lg-2">
+          </div>
+         <div class="col-lg-2">
             <div class="card" >
-               <img class="card-img-top" src="..." alt="Card image cap">
+                <i class="fas fa-universal-access fa-6x" id="member-pic"></i>
                <div class="card-body">
                   <h5 class="card-title">Classes</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text" id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                </div>
             </div>
          </div>
-         <div class="col-lg-3">
+         <div class="col-lg-2">
             <div class="card" >
-               <img class="card-img-top" src="..." alt="Card image cap">
+               <i class="fas fa-users fa-6x" id="member-pic"></i>
                <div class="card-body">
                   <h5 class="card-title">Membership Pricing</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -159,28 +187,33 @@ body,html{
                </div>
             </div>
          </div>
-         <div class="col-lg-3">
+         <div class="col-lg-2">
             <div class="card" >
-               <img class="card-img-top" src="..." alt="Card image cap">
+                <i class="far fa-star fa-6x" id="star-pic"></i>
                <div class="card-body">
                   <h5 class="card-title">Specials</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text" id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                </div>
             </div>
          </div>
-         <div class="col-lg-3">
+         <div class="col-lg-2">
             <div class="card" >
-               <img class="card-img-top" src="..." alt="Card image cap">
+                <i class="far fa-calendar-alt fa-6x" id="calendar-pic"></i>
+               <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
                <div class="card-body">
                   <h5 class="card-title">Schedules</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text"id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                </div>
             </div>
          </div>
       </div>
-   </div>
+    <!-- </div>  -->
+
+
+
+
    <div class="row about">
       <div class="col-md-6">
          <div class="jumbotron ">

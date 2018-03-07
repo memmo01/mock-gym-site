@@ -9,20 +9,15 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
 <style>
 body,html{
-    margin:0 auto;
-  
      background-color:grey;
 }
 .navbar{
-     /* height:50px;  */
-    /* background-color:blue; */
-    width:100%;
     color: white;
-    margin:0 auto;
+
     
 }
 .main{
@@ -31,18 +26,21 @@ body,html{
     width:100%;
 }
 .about{
-    /* height:400px; */
     background-color: lightblue;
     padding-bottom:20px;
 }
-.sched-price{
+.gym-options{
     height:400px;
     background-color: lightgray;
     display: inline-flex;
+    padding-top:60px;
+   
 }
+.location{
+    height:100%;
+    background-color: lightgray;
+    display: inline-flex;
 
-#carouselExampleControls{
-    width:100%;
 }
 #slide1{
     background-image: url("IMG_3560_edited.jpg");
@@ -62,18 +60,27 @@ body,html{
 .center{
     text-align: center;
 }
-.jumbotron{
-    height:100%;
-}
 .rounded-circle{
     float:left;
     margin-right:10px;
    
 }
-
-.bo{
-    margin-bottom:20px;
-}
+   #map {
+        height: 400px;
+        width: 100%;
+        margin-top:20px;
+       }
+    .local-map-info{
+        display:inline-flex;
+    }
+    .business-loc-info{
+        margin-top:20px;
+        padding-top:60px;
+        background-color: lightblue;
+        height:400px;
+        text-align: center;
+    }
+  
 
     </style>
 <body>
@@ -120,7 +127,7 @@ body,html{
       <div class="col-md-2">
       </div>
       <div class="col-lg-8">
-         <div class="jumbotron bo">
+         <div class="jumbotron">
             <h1>About Us</h1>
             <p>
                is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
@@ -131,10 +138,8 @@ body,html{
       </div>
    </div>
    <div class="row">
-      <div class="col-lg-12 sched-price">
+      <div class="col-lg-12 gym-options">
          <div class="col-lg-3">
-         </div>
-         <div class="col-lg-2">
             <div class="card" >
                <img class="card-img-top" src="..." alt="Card image cap">
                <div class="card-body">
@@ -144,21 +149,31 @@ body,html{
                </div>
             </div>
          </div>
-         <div class="col-lg-2">
+         <div class="col-lg-3">
             <div class="card" >
                <img class="card-img-top" src="..." alt="Card image cap">
                <div class="card-body">
-                  <h5 class="card-title">Pricing</h5>
+                  <h5 class="card-title">Membership Pricing</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                </div>
             </div>
          </div>
-         <div class="col-lg-2">
+         <div class="col-lg-3">
             <div class="card" >
                <img class="card-img-top" src="..." alt="Card image cap">
                <div class="card-body">
                   <h5 class="card-title">Specials</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-3">
+            <div class="card" >
+               <img class="card-img-top" src="..." alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Schedules</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                </div>
@@ -196,7 +211,7 @@ body,html{
                   </div>
                   <div class="card-body">
                      <h5 class="card-title">Michelle Fitness</h5>
-                     <img class="rounded-circle" src="./personal-trainer2.jpg" style="width:5rem;" "height:15px;" alt="Card image cap">
+                     <img class="rounded-circle" src="./personal-trainer2.jpg" style="width:5rem;" alt="Card image cap">
                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                   </div>
                </div>
@@ -214,6 +229,36 @@ body,html{
          </div>
       </div>
    </div>
-   <div class="row about">
-   <div class="col-2-lg"></div>
+   <div class="row">
+      <div class="col-lg-12 location">
+         <div class="col-lg-2">
+         </div>
+         <!-- <div class="col-lg-8"> -->
+         <div class="jumbotron col-lg-8">
+            <h1 class="display-4">Location</h1>
+            <div class="col-lg-12 local-map-info">
+               <div class="col-lg-8 try">
+                  <div id="map">
+                     <iframe
+                        width="100%"
+                        height="400"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDkqz3aZuPKwjTOJH0BiHPBlUiTanjQiYk&q=Charlotte+NC" allowfullscreen>
+                     </iframe>
+                  </div>
+               </div>
+               <div class="col-lg-4 business-loc-info">
+                  COMPANY LOGO<br><br>
+                  <b>The Fitness center</b><br>
+                  555 Fitness ln<br>
+                  Fitness, NC 28888<br>
+                  United States<br>
+                  704-555-5555<br>
+               </div>
+            </div>
+         </div>
+         <!-- </div> -->
+      </div>
+   </div>
+
 </body></html>

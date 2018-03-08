@@ -26,7 +26,7 @@ body,html{
     width:100%;
 }
 .about{
-    background-color: lightblue;
+    background-color: #B0D9D4;
     padding-bottom:20px;
 }
 .gym-options{
@@ -37,9 +37,9 @@ body,html{
    
 }
 .location{
-    height:100%;
     background-color: lightgray;
-    display: inline-flex;
+   
+   
 
 }
 #slide1{
@@ -71,20 +71,21 @@ body,html{
     margin-right:10px;
    
 }
-   #map {
-        height: 400px;
-        width: 100%;
+    #map {
         margin-top:20px;
-       }
+        
+       } 
+   
     .local-map-info{
         display:inline-flex;
+      
     }
     .business-loc-info{
-        margin-top:20px;
+         margin-top:20px; 
         padding-top:60px;
         background-color: lightblue;
-        height:400px;
-        text-align: center;
+        height:450px;
+         text-align: center; 
     }
     #calendar-pic{
         margin-left:30%;
@@ -101,7 +102,39 @@ body,html{
     #text{
         padding-top:24px;
     }
-  
+    .card{
+        margin-top:10px;
+    }
+    .card-header{
+        background-color: lightblue;
+    }
+     .b{
+        display:inline-block;
+    } 
+    .card-body{
+        text-align: center;
+    }
+    .photo{
+        margin-top:5px;
+    }
+    .video{
+        margin-top:5px;
+    }
+
+  .arrow{
+    margin-top:10px;
+      opacity: .3;
+  }
+     .arrow:hover{
+      opacity: .7;
+  }
+    .list-group{
+        margin-top:50px;
+    }
+    
+   
+
+ 
   
 
     </style>
@@ -112,7 +145,7 @@ body,html{
          company logo
       </div>
       <div class="col-lg-4 center">
-         the fitness center
+         The Fitness Center
       </div>
       <div class-"col-lg-4">
          <button type="button" class="btn btn-outline-light btn-sm">Locations</button>
@@ -122,6 +155,16 @@ body,html{
       </div>
       <div class="col-lg-12 links">
       </div>
+   </nav>
+   <nav class="navbar fixed-bottom navbar-dark bg-dark">
+      <!-- <div class="col-lg-12 mx-auto"> -->
+      <div class="mx-auto" width="200px">
+         <i class="fab fa-facebook-square fa-2x social-icon"></i>
+         <i class="fab fa-instagram fa-2x social-icon"></i>
+         <i class="fab fa-youtube fa-2x social-icon"></i>
+         <i class="fab fa-twitter fa-2x social-icon"></i>
+      </div>
+      <!-- </div> -->
    </nav>
    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -159,67 +202,101 @@ body,html{
       <div class="col-md-2">
       </div>
    </div>
-
-
-
-
    <div class="row gym-options">
-       
-          <div class="col-lg-2">
-          </div>
-         <div class="col-lg-2">
-            <div class="card" >
-                <i class="fas fa-universal-access fa-6x" id="member-pic"></i>
-               <div class="card-body">
-                  <h5 class="card-title">Classes</h5>
-                  <p class="card-text" id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-2">
-            <div class="card" >
-               <i class="fas fa-users fa-6x" id="member-pic"></i>
-               <div class="card-body">
-                  <h5 class="card-title">Membership Pricing</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-2">
-            <div class="card" >
-                <i class="far fa-star fa-6x" id="star-pic"></i>
-               <div class="card-body">
-                  <h5 class="card-title">Specials</h5>
-                  <p class="card-text" id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-2">
-            <div class="card" >
-                <i class="far fa-calendar-alt fa-6x" id="calendar-pic"></i>
-               <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-               <div class="card-body">
-                  <h5 class="card-title">Schedules</h5>
-                  <p class="card-text"id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-               </div>
+      <div class="col-lg-2">
+      </div>
+      <div class="col-lg-2">
+         <div class="card" >
+            <i class="fas fa-universal-access fa-6x" id="member-pic"></i>
+            <div class="card-body">
+               <h5 class="card-title">Classes</h5>
+               <p class="card-text" id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
          </div>
       </div>
-    <!-- </div>  -->
-
-
-
-
+      <div class="col-lg-2">
+         <div class="card" >
+            <i class="fas fa-users fa-6x" id="member-pic"></i>
+            <div class="card-body">
+               <h5 class="card-title">Membership Pricing</h5>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-2">
+         <div class="card" >
+            <i class="far fa-star fa-6x" id="star-pic"></i>
+            <div class="card-body">
+               <h5 class="card-title">Specials</h5>
+               <p class="card-text" id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-2">
+         <div class="card" >
+            <i class="far fa-calendar-alt fa-6x" id="calendar-pic"></i>
+            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+            <div class="card-body">
+               <h5 class="card-title">Schedules</h5>
+               <p class="card-text"id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- </div>  -->
    <div class="row about">
       <div class="col-md-6">
          <div class="jumbotron ">
             <div class="container">
-               <h1 class="display-4">Our Amenities</h1>
-               <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+               <h1 class="display-4">Personalized Training</h1>
+               <p class="lead">Customized fitness programs designed to reach personal health and fitness goals in:</p>
+               <ul class="list-group">
+                  <li class="list-group-item">Body Toning</li>
+                  <li class="list-group-item">Weight loss</li>
+                  <li class="list-group-item">Improve Core Strength</li>
+                  <li class="list-group-item">Strengthen Underactive Muscles</li>
+                  <li class="list-group-item">Creating a Healthier Lifestyle</li>
+                  <li class="list-group-item">Improve Balance</li>
+                  <li class="list-group-item">Improve Athletic Percormance</li>
+               </ul>
+            </div>
+         </div>
+         <div class="jumbotron ">
+            <div class="container">
+               <div class="card">
+                  <div class="card-header">
+                     <h3 class="display-4">Video Gallery</h3>
+                  </div>
+                  <div class="card-body">
+                     <div class="col-lg-12"> 
+                        <img src="./download.png" alt="..." style="width:45%" class="video" >
+                        <img src="./download.png" alt="..." style="width:45%" class="video">
+                        <img src="./download.png" alt="..." style="width:45%" class="video">
+                        <img src="./download.png" alt="..." style="width:45%" class="video">
+                     </div>
+                     <i class="fas fa-arrow-circle-down fa-2x arrow" ></i>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header">
+                     <h3 class="display-4">Photo Gallery</h3>
+                  </div>
+                  <div class="card-body b">
+                     <div class="col-lg-12">             
+                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem"  >
+                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
+                     </div>
+                     <i class="fas fa-arrow-circle-down fa-2x arrow" ></i>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -235,7 +312,7 @@ body,html{
                   <div class="card-body">
                      <h5 class="card-title">Bob Fitness</h5>
                      <img class="rounded-circle" src="./lead-trainer.jpg" style="width:5rem;" alt="Card image cap">
-                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     <p class="card-text">earch for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).With supporting text below as a natural lead-in to additional content.</p>
                   </div>
                </div>
                <div class="card">
@@ -260,38 +337,57 @@ body,html{
                </div>
             </div>
          </div>
+         <div class="jumbotron">
+            <h1 class="display-4">Upcoming Events</h1>
+            <ul class="list-group">
+               <li class="list-group-item list-group-item-action">Cras justo odio</li>
+               <li class="list-group-item list-group-item-action ">Dapibus ac facilisis in</li>
+               <li class="list-group-item list-group-item-action">Morbi leo risus</li>
+               <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
+               <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
+            </ul>
+         </div>
       </div>
    </div>
-   <div class="row">
-      <div class="col-lg-12 location">
-         <div class="col-lg-2">
-         </div>
-         <!-- <div class="col-lg-8"> -->
-         <div class="jumbotron col-lg-8">
-            <h1 class="display-4">Location</h1>
-            <div class="col-lg-12 local-map-info">
-               <div class="col-lg-8 try">
-                  <div id="map">
-                     <iframe
-                        width="100%"
-                        height="400"
-                        frameborder="0" style="border:0"
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDkqz3aZuPKwjTOJH0BiHPBlUiTanjQiYk&q=Charlotte+NC" allowfullscreen>
-                     </iframe>
+   <div class="row location">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col">
+            </div>
+            <div class="jumbotron col-lg-8 col-md-8 col-sm-12 col-xs-12 jumboLoc">
+               <h1 class="display-4">Location</h1>
+               <div class="row">
+                  <div class="col">
                   </div>
-               </div>
-               <div class="col-lg-4 business-loc-info">
-                  COMPANY LOGO<br><br>
-                  <b>The Fitness center</b><br>
-                  555 Fitness ln<br>
-                  Fitness, NC 28888<br>
-                  United States<br>
-                  704-555-5555<br>
+                  <div class="col-lg-6 col-md-12 col-sm-12 map">
+                     <div id="map">
+                        <iframe
+                           width="100%"
+                           height="450"
+                           frameborder="0" style="border:0"
+                           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDkqz3aZuPKwjTOJH0BiHPBlUiTanjQiYk&q=Charlotte+NC" allowfullscreen>
+                        </iframe>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12 col-xs-6 business-loc-info">
+                     COMPANY LOGO<br><br>
+                     <b>The Fitness center</b><br>
+                     555 Fitness ln<br>
+                     Fitness, NC 28888<br>
+                     United States<br>
+                     704-555-5555<br>
+                  </div>
+                  <div class="col"></div>
                </div>
             </div>
+            <div class="col">
+            </div>
          </div>
-         <!-- </div> -->
       </div>
    </div>
+
+           
+    
+     
 
 </body></html>

@@ -10,6 +10,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
 </head>
 <style>
 body,html{
@@ -30,7 +36,6 @@ body,html{
     padding-bottom:20px;
 }
 .gym-options{
-    /* height:400px; */
     background-color: lightgray;
     display: inline-flex;
     padding:60px 0 40px 0;
@@ -60,10 +65,8 @@ body,html{
        background-repeat: no-repeat;
     height:600px;
 }
-.card{
-    /* margin-top:30px; */
-}
-.center{
+
+.center-nav-text{
     text-align: center;
 }
 .rounded-circle{
@@ -87,39 +90,35 @@ body,html{
         height:450px;
          text-align: center; 
     }
-    #calendar-pic{
-        margin-left:30%;
+    .icon-pic{      
         padding-top:20px;
+         
+        
     }
-     #star-pic{
-        margin-left:25%;
-        padding-top:20px;
+    a{
+        color:white
     }
-    #member-pic{
-        margin-left:20%;
-        padding-top:20px;
-    }
+     a:hover{
+         color:black;
+     }
     #text{
         padding-top:24px;
     }
-    .card{
-        margin-top:10px;
-    }
+    
     .card-header{
         background-color: lightblue;
     }
-     .b{
-        display:inline-block;
-    } 
+     
     .card-body{
         text-align: center;
     }
-    .photo{
+    .multimedia{
         margin-top:5px;
     }
-    .video{
-        margin-top:5px;
+      .multimedia:hover{
+        border:2px solid black;
     }
+   
 
   .arrow{
     margin-top:10px;
@@ -130,6 +129,16 @@ body,html{
   }
     .list-group{
         margin-top:50px;
+    }
+    .top-card{
+        display:inline-block;
+        text-align: center;
+    }
+    #hidden-pictures{
+        display: none;
+    }
+     #hidden-videos{
+        display: none;
     }
     
    
@@ -144,14 +153,14 @@ body,html{
       <div class="col-lg-3">
          company logo
       </div>
-      <div class="col-lg-4 center">
+      <div class="col-lg-4 center-nav-text">
          The Fitness Center
       </div>
       <div class-"col-lg-4">
-         <button type="button" class="btn btn-outline-light btn-sm">Locations</button>
-         <button type="button" class="btn btn-outline-light btn-sm">Membership</button>
-         <button type="button" class="btn btn-outline-light btn-sm">Schedule</button>
-         <button type="button" class="btn btn-primary">Sign up</button>
+         <button type="button" class="btn btn-outline-light btn-sm"><a href="#location" style="text-decoration: none">Locations</a></button>
+         <button type="button" class="btn btn-outline-light btn-sm" data-toggle="modal" data-target="#exampleModalCenter" onclick="runModal('member')">Membership</button>
+         <button type="button" class="btn btn-outline-light btn-sm"data-toggle="modal" data-target="#exampleModalCenter" onclick="runModal('schedule')">Schedule</button>
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick="runModal('signup')">Sign up</button>
       </div>
       <div class="col-lg-12 links">
       </div>
@@ -193,7 +202,7 @@ body,html{
       </div>
       <div class="col-lg-8">
          <div class="jumbotron">
-            <h1>About Us</h1>
+            <h1 class="display-4">About Us</h1>
             <p>
                is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
             </p>
@@ -202,50 +211,63 @@ body,html{
       <div class="col-md-2">
       </div>
    </div>
+
+
    <div class="row gym-options">
-      <div class="col-lg-2">
+      <div class="col">
       </div>
       <div class="col-lg-2">
-         <div class="card" >
-            <i class="fas fa-universal-access fa-6x" id="member-pic"></i>
+         <div class="card">
+             <div class="top-card">
+            <i class="fas fa-universal-access fa-6x icon-pic" ></i>
+             </div>
             <div class="card-body">
                <h5 class="card-title">Classes</h5>
                <p class="card-text" id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
+               <a href="#" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModalCenter" onclick="runModal('classes')">Check Classes</a>
             </div>
          </div>
       </div>
       <div class="col-lg-2">
          <div class="card" >
-            <i class="fas fa-users fa-6x" id="member-pic"></i>
+             <div class="top-card">
+            <i class="fas fa-users fa-6x icon-pic"></i>
+             </div>
             <div class="card-body">
                <h5 class="card-title">Membership Pricing</h5>
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
+               <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick="runModal('pricing')" >Check Rates</a>
             </div>
          </div>
       </div>
       <div class="col-lg-2">
          <div class="card" >
-            <i class="far fa-star fa-6x" id="star-pic"></i>
+             <div class="top-card">
+            <i class="far fa-star fa-6x icon-pic"></i>
+             </div>
             <div class="card-body">
                <h5 class="card-title">Specials</h5>
                <p class="card-text" id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
+               <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick="runModal('special')">Check Specials</a>
             </div>
          </div>
       </div>
       <div class="col-lg-2">
          <div class="card" >
-            <i class="far fa-calendar-alt fa-6x" id="calendar-pic"></i>
+             <div class="top-card">
+            <i class="far fa-calendar-alt fa-6x icon-pic"></i>
+             </div>
             <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
             <div class="card-body">
+                
                <h5 class="card-title">Schedules</h5>
                <p class="card-text"id="text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
+               <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick="runModal('schedule')">Check Schedules</a>
             </div>
          </div>
       </div>
+        <div class="col">
+        </div>
    </div>
    <!-- </div>  -->
    <div class="row about">
@@ -273,33 +295,52 @@ body,html{
                   </div>
                   <div class="card-body">
                      <div class="col-lg-12"> 
-                        <img src="./download.png" alt="..." style="width:45%" class="video" >
-                        <img src="./download.png" alt="..." style="width:45%" class="video">
-                        <img src="./download.png" alt="..." style="width:45%" class="video">
-                        <img src="./download.png" alt="..." style="width:45%" class="video">
+                        <img src="./download.png" alt="..." style="width:45%" class="multimedia" >
+                        <img src="./download.png" alt="..." style="width:45%" class="multimedia">
+                        <img src="./download.png" alt="..." style="width:45%" class="multimedia">
+                        <img src="./download.png" alt="..." style="width:45%" class="multimedia">
+                        <span id="hidden-videos">
+                            
+                        <img src="./download.png" alt="..." style="width:45%" class="multimedia">
+                        <img src="./download.png" alt="..." style="width:45%" class="multimedia">
+                        </span>
                      </div>
-                     <i class="fas fa-arrow-circle-down fa-2x arrow" ></i>
+                     <div class="arrow-vid"><i class="fas fa-arrow-circle-down fa-2x arrow" ></i></div>
                   </div>
                </div>
                <div class="card">
                   <div class="card-header">
                      <h3 class="display-4">Photo Gallery</h3>
                   </div>
-                  <div class="card-body b">
-                     <div class="col-lg-12">             
-                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem"  >
-                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
-                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
-                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
-                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
-                        <img class="rounded photo" src="./download.png" alt="..." style="width:4.5rem" >
+                  <div class="card-body">
+                     <div class="col-lg-12 hoho">             
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <span id="hidden-pictures">
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        <img class="rounded multimedia" src="./download.png" alt="..." style="width:4.5rem" >
+                        </span>
                      </div>
-                     <i class="fas fa-arrow-circle-down fa-2x arrow" ></i>
+                     <div class="arrow-pic"><i class="fas fa-arrow-circle-down fa-2x arrow"></i></div>
                   </div>
                </div>
             </div>
          </div>
       </div>
+        
       <div class="col-md-6">
          <div class="jumbotron">
             <div class="container">
@@ -338,7 +379,7 @@ body,html{
             </div>
          </div>
          <div class="jumbotron">
-            <h1 class="display-4">Upcoming Events</h1>
+            <h1 class="display-4">News and Upcoming Events</h1>
             <ul class="list-group">
                <li class="list-group-item list-group-item-action">Cras justo odio</li>
                <li class="list-group-item list-group-item-action ">Dapibus ac facilisis in</li>
@@ -354,7 +395,7 @@ body,html{
          <div class="row">
             <div class="col">
             </div>
-            <div class="jumbotron col-lg-8 col-md-8 col-sm-12 col-xs-12 jumboLoc">
+            <div class="jumbotron col-lg-8 col-md-8 col-sm-12 col-xs-12 jumboLoc" id="location">
                <h1 class="display-4">Location</h1>
                <div class="row">
                   <div class="col">
@@ -385,6 +426,61 @@ body,html{
          </div>
       </div>
    </div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+function runModal(x){
+    $(".modal-header").empty();
+    if(x ==="member"){
+        $(".modal-header").html("memberSHIP!!")
+    }
+    else if(x ==="schedule"){
+         $(".modal-header").html("Schedule");
+    }
+    else if(x === "signup"){
+         $(".modal-header").html("signUP");
+    }
+    else if(x === "classes"){
+        $(".modal-header").html("Classes offered");
+    }
+    else if(x === "special"){
+        $(".modal-header").html("Specials");
+    }
+    else if(x === "pricing"){
+        $(".modal-header").html("Our Prices!");
+    }
+}
+$(".arrow-pic").on("click", function(){
+    $("#hidden-pictures").toggle();
+    
+    
+})
+$(".arrow-vid").on("click", function(){
+    $("#hidden-videos").toggle();
+    
+})
+
+
+</script>
+   
 
            
     
